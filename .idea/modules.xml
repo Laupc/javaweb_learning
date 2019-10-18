@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cookie/cookie.iml" filepath="$PROJECT_DIR$/cookie/cookie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaweb_learning.iml" filepath="$PROJECT_DIR$/javaweb_learning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/login_practice/login_practice.iml" filepath="$PROJECT_DIR$/login_practice/login_practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet_learning/servlet_learning.iml" filepath="$PROJECT_DIR$/servlet_learning/servlet_learning.iml" />
+    </modules>
+  </component>
+</project>
