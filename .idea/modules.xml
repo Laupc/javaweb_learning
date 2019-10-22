@@ -6,6 +6,9 @@
       <module fileurl="file://$PROJECT_DIR$/javaweb_learning.iml" filepath="$PROJECT_DIR$/javaweb_learning.iml" />
       <module fileurl="file://$PROJECT_DIR$/login_practice/login_practice.iml" filepath="$PROJECT_DIR$/login_practice/login_practice.iml" />
       <module fileurl="file://$PROJECT_DIR$/servlet_learning/servlet_learning.iml" filepath="$PROJECT_DIR$/servlet_learning/servlet_learning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servletconfig/servletconfig.iml" filepath="$PROJECT_DIR$/servletconfig/servletconfig.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servletcontext/servletcontext.iml" filepath="$PROJECT_DIR$/servletcontext/servletcontext.iml" />
+      <module fileurl="file://$PROJECT_DIR$/session/session.iml" filepath="$PROJECT_DIR$/session/session.iml" />
     </modules>
   </component>
 </project>

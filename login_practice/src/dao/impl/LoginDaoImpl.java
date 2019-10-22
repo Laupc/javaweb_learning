@@ -18,7 +18,7 @@ public class LoginDaoImpl implements LoginDao {
             //加载驱动
             Class.forName("com.mysql.jdbc.Driver");
             //获取连接对象
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_servletlearning","root","123456");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_javaeelearning","root","123456");
             //创建SQL命令
             String sql = "select * from user where username=? and password = ? ";
             //创建SQL命令对象
@@ -72,7 +72,7 @@ public class LoginDaoImpl implements LoginDao {
             //加载驱动
             Class.forName("com.mysql.jdbc.Driver");
             //获取连接对象
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_servletlearning","root","123456");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_javaeelearning","root","123456");
             //创建SQL命令
             String sql = "select * from user where user_id=?";
             //创建SQL命令对象

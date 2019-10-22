@@ -4,12 +4,10 @@ import pojo.User;
 import service.LoginService;
 import service.impl.LoginServiceImpl;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
 
 /**
@@ -87,8 +85,21 @@ public class LoginServlet extends HttpServlet {
                 cookie.setMaxAge(3*24*3600);
                 cookie.setPath("/login_practice/cookiecheck");
                 resp.addCookie(cookie);
+                //将数据存储到session对象中
+                HttpSession session = req.getSession();
+                session.setAttribute("user",user);
+                //创建网页计数器
+                ServletContext servletContext = this.getServletContext();
+                if (servletContext.getAttribute("num") !=null){
+                    int num = (int) servletContext.getAttribute("num");
+                    num+=1;
+                    servletContext.setAttribute("num",num);
+                }else {
+                    servletContext.setAttribute("num",1);
+                }
                 //重定向
                 resp.sendRedirect("/login_practice/main");
+                return;
             }else {
                 //请求转发
                 req.setAttribute("msg","用户名或密码错误");

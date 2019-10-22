@@ -4,6 +4,7 @@ import pojo.User;
 import service.LoginService;
 import service.impl.LoginServiceImpl;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -48,9 +49,22 @@ public class CookieCheckServlet extends HttpServlet {
                 LoginService loginService = new LoginServiceImpl();
                 User user =  loginService.checkUseridService(user_id);
                 if (user != null){
+                    //将用户数据存储到session中
+                    req.getSession().setAttribute("user",user);
+                    //创建网页计数器
+                    ServletContext servletContext = this.getServletContext();
+                    if (servletContext.getAttribute("num") !=null){
+                        int num = (int) servletContext.getAttribute("num");
+                        num+=1;
+                        servletContext.setAttribute("num",num);
+                    }else {
+                        servletContext.setAttribute("num",1);
+                    }
                     resp.sendRedirect("/login_practice/main");
+                    return;
                 }else{
                     req.getRequestDispatcher("page").forward(req,resp);
+                    return;
                 }
             }
         }else{
